@@ -30,3 +30,16 @@ RDD는 레코드로 구성된 데이터 집합이다. RDD는 각 파티션이 �
 RDD는 일단 인스턴스화되고 데이터로 채워진 후에는 업데이트할 수 없다. 
 대신 변환 연산을 통해 기존 RDD를 기반으로 새로운 RDD를 생성할 수 있다.
 
+
+## 예시
+
+RDD에 데이터를 로드하고, 필터 변환을 사용해 새로운 RDD를 생성한 다음, 액션을 사용해 결과 RDD를 디스크에 저장하는 예시이다.
+
+```bash
+# 로컬 파일 시스템에서 로그 파일 로드
+logfilesrdd = sc.textFile("file:///var/log/hadoop/hdfs/hadoop-hdfs-*")
+# 오류에 대해서만 로그 레코드를 필터링하는 변환작업
+onlyerrorsrdd = logfilesrdd.filter(lambda line : "ERROR" in line)
+#onlyerrorsrdd를 파일로 저장하는 액션작업
+onlyerrorsrdd.saveAsTextFile("file:///tmp/onlyerrorsrdd")
+```
