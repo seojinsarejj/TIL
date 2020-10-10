@@ -24,3 +24,16 @@
 **minPartitions** : 파티션 수를 얼마나 만들지 결정한다.
 
 **use_unicode** : 유니 코드 또는 UTF-8을 문자 인코딩 스키마로 사용할지 여부를 지정한다.
+
+
+# wholeTextFiles()
+
+`sc.wholeTextFiles(path, minPartitions=None, use_unicode=True)`
+
+wholeTextFiles() 메소드는 여러 파일이 포함된 디렉토리를 읽을 수 있다.
+
+
+# textFile() VS wholeTextFiles()
+
+wholeTextFiles() : 키와 파일 내용을 표함하는 값으로 구성된 레코드로 표시
+textFiles() : 각 파일의 각 라인은 해당 팡리 원본 콘텍스트가 없는 별도의 레코드를 나타낸다.
