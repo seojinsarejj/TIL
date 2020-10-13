@@ -37,3 +37,20 @@ wholeTextFiles() 메소드는 여러 파일이 포함된 디렉토리를 읽을 
 
 wholeTextFiles() : 키와 파일 내용을 표함하는 값으로 구성된 레코드로 표시
 textFiles() : 각 파일의 각 라인은 해당 팡리 원본 콘텍스트가 없는 별도의 레코드를 나타낸다.
+
+
+## 프로그래밍 방식으로 데이터 로드하기
+
+내부 데이터를 이용하는 방법은 다음 메소드를 사용하여 처리합니다.
+
+# parallelize
+
+```python
+data = [1, 2, 3, 4, 5]
+distData = sc.parallelize(data)
+distData = sc.parallelize(data, 5) // 파티션 개수 지정
+```
+
+
+
+
