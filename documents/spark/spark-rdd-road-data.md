@@ -43,7 +43,9 @@ textFiles() : 각 파일의 각 라인은 해당 팡리 원본 콘텍스트가 �
 
 내부 데이터를 이용하는 방법은 다음 메소드를 사용하여 처리합니다.
 
-# parallelize
+# parallelize()
+
+`sc.parallelize(c, numSlices=None)`
 
 ```python
 data = [1, 2, 3, 4, 5]
@@ -51,6 +53,25 @@ distData = sc.parallelize(data)
 distData = sc.parallelize(data, 5) // 파티션 개수 지정
 ```
 
+**count()** : 컬렉션의 요소 수를 반환한다.
+```python
+distData.count() 
+9
+```
 
+**collect()** : 병렬 컬랙션을 목록으로 반환한다.
+```python
+[1, 2, 3, 4, 5]
+```
 
+# range()
+
+`sc.range(start, end=None, step=1, numSlices=None)`
+
+range() 메소드는 사용자를 위한 목록을 생성하고, RDD를 만들고 배포한다. start,end 및 step 인수는 값의 순서를 정의하고,
+numSlices는 원하는 분할 수를 지정한다.
+
+```python
+# 0에서 시작하는 1000개의 정수로,2개의 파티션에서 1씩 증가하는 RDD를 만든다
+range_rdd = sc.range(0, 1000, 1, 2)
 
