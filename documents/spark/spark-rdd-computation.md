@@ -12,9 +12,19 @@
 
 ## 변환, 액션 및 지연 평가
 
-# 변환
+### 변환
+일반적인 변환에는 맵과 필터 함수가 포함된다.
 
 ```python
 originalrdd = sc.parallelize([0,1,2,3,4,5,6,7,8])
 newrdd = origianlrdd.filter(lambda x: x % 2)
 ```
+위 예제는 filter() 변환을 origianlrdd의 각 요소에 적용해 컬렉션의 짝수를 건너뛴다.
+
+### 액션
+액션은 값 또는 데이터를 드라이버 프로그램에 반환한다.
+
+```python
+newrdd.collect() # will return [1,3,5,7]
+```
+
