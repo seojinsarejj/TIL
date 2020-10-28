@@ -8,7 +8,7 @@ docker -v
 ```
 
 
-### 컨테이너를 생성한다.
+### 컨테이너를 생성한다. (run)
 - docker run : 컨테이너를 생성하고 실행하는 역할
 - -i -t : 컨테이너와 상호 입출력을 가능하게 하는 역할
 - ubuntu:14.04 : 컨테이너를 생성하기 위한 이미지의 이름
@@ -26,3 +26,11 @@ exit
 docker pull centos:7
 ```
 
+### 컨테이너를 생성한다. (create)
+- create : 컨테이너 생성 ( 내부 접속 X )
+- start : 컨테이너 실행
+- attach : 컨테이너 내부로 들어감
+
+```bash
+docker create -i -t --name mycentos centos:7
+```
