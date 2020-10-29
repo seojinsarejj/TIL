@@ -20,6 +20,8 @@ docker run -i -t ubuntu:14.04
 ```bash
 exit
 ```
+- exit : 컨테이너를 정지한 후 빠져나온다.
+- Ctrl + P,Q : 컨테이너를 정지하지 않고 빠져나온다.
 
 ### 이미지를 내려받는다.
 ```bash
@@ -33,4 +35,14 @@ docker pull centos:7
 
 ```bash
 docker create -i -t --name mycentos centos:7
+
+docker start mycentos
+
+docker attach mycentos
 ```
+
+
+
+
+
+

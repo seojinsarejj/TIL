@@ -52,3 +52,12 @@
 `RDD.filter(<function>)`
 
 - 데이터세트의 각 요소에 대해 일반적으로 익명의 함수로 표현된 부울 표현식을 평가한다.
+
+## distinct()
+
+구문:
+`RDD.distinct(numPartitons=None)`
+
+- 입력 RDD에 특정 요소를 포함해 만들어진 새로운 RDD를 반환한다.
+- 이는 중복을 제거하는 데 이용한다. 
+- numPartitions 인수는 타깃 파티션 수만큼 데이터를 재분산할 수 있다.
