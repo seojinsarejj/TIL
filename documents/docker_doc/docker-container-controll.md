@@ -73,3 +73,33 @@ docker run -i -t ubuntu:14.04 echo hello world!
 docker rename angry_morse my_container
 ```
 - rename을 사용하여 컨테이너의 이름을 변경할 수 있습니다.
+
+
+## 컨테이너 삭제
+
+다음 명령어를 사용해 컨테이너를 삭제한다.
+
+```bash
+docker rm angry_morse
+```
+
+- 실행 중인 컨테이너는 삭제할 수 없다.
+- 다음은 실행 중인 컨테이너를 삭제하는 옵션이다.
+
+```bash
+docker rm -f mycentos
+```
+
+### prune 
+- 모든 컨테이너를 삭제할 수 있다. 
+```bash
+docker container prune
+```
+
+또는 다음과 같이 사용할 수 있다.
+
+```bash
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+```
+
