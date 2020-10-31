@@ -70,3 +70,10 @@
 
 - 지정 함수로 그룹화된 항목의 RDD를 반환한다.
 - numPartitions 인수를 사용하면, 그룹화 함수의 출력에서 키 공간의 해시를 계산해 지정된 수의 파티션을 자동으로 생성할 수 있다.
+
+## sortBy()
+
+구문:
+`RDD.sortBy(<keyfunc>, ascending=True, numPartitions=None)`
+
+- 주어진 데이터세트에 대해 키를 지정하는 <keyfunc>인수로 RDD를 정렬한다.
