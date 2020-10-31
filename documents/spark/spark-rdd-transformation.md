@@ -61,3 +61,12 @@
 - 입력 RDD에 특정 요소를 포함해 만들어진 새로운 RDD를 반환한다.
 - 이는 중복을 제거하는 데 이용한다. 
 - numPartitions 인수는 타깃 파티션 수만큼 데이터를 재분산할 수 있다.
+
+
+## groupBy()
+
+구문:
+`RDD.groupBy(<function>, numPartitions=None)`
+
+- 지정 함수로 그룹화된 항목의 RDD를 반환한다.
+- numPartitions 인수를 사용하면, 그룹화 함수의 출력에서 키 공간의 해시를 계산해 지정된 수의 파티션을 자동으로 생성할 수 있다.
