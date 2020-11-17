@@ -21,9 +21,10 @@
 
 ## 레이어드 아키텍처 적용
 
+```
 api
 |- view : presentation layer - endpoint 정의, request 받기
 |- service : business layer - 로직 구현
 |- model : persistence layer - 데이터베이스 접속
 |- app.py : 앱을 실행해 모든 레이어의 변수들을 연결
-
+```
