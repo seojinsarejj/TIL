@@ -10,10 +10,10 @@ docker -v
 
 ### 컨테이너를 생성한다. 
 `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
-- docker run : 컨테이너를 생성하고 실행
-- create : 컨테이너 생성 ( 내부 접속 X )
-- start : 컨테이너 실행
-- attach : 컨테이너 내부로 들어감
+- **docker run** : 컨테이너를 생성하고 실행
+- **create** : 컨테이너 생성 ( 내부 접속 X )
+- **start** : 컨테이너 실행
+- **attach** : 컨테이너 내부로 들어감
 
 ```bash
 
