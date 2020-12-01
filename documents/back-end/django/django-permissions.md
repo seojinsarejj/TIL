@@ -74,7 +74,7 @@ class IsAuthenticatedOrReadOnly(BasePermission):
 
 - 여기서 **SAFE_METHODS**는 
 `SAFE_METHODS = ('GET', 'HEAD', 'OPTIONS')`로 이루어져 있다.
-- 즉 위 코드는 GET, HEAD, OPTIONS 메소드를 통한 접근은 인증 없이 가능하다는 것
+- 즉 위 코드는 GET, HEAD, OPTIONS 메소드를 통한 접근은 인증 없이 가능하다는 것`
 
 
 이렇게 정의된 permissions는 다음 방법으로 사용할 수 있다.
