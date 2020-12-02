@@ -26,13 +26,13 @@ docker start mycentos
 docker attach mycentos
 ```
 
-
+V
 
 #### 옵션
 
 
 | 옵션 | 의미 |
----| :---: | ---:
+:---: | :---: | 
 -d | detached mode 흔히 말하는 백그라운드 모드 |
 -p | 호스트와 컨테이너의 포트를 연결 (포워딩) |
 -v | 호스트와 컨테이너의 디렉토리를 연결 (마운트) |
