@@ -26,7 +26,6 @@ docker start mycentos
 docker attach mycentos
 ```
 
-V
 
 #### 옵션
 
