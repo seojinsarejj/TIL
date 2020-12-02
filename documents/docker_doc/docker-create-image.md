@@ -3,6 +3,7 @@
 
 ## 컨테이너를 이미지로 저장하기
 - **기본 컨테이너** + **새로운 이미지** = **커스텀 이미지**
+![create-image](../../images/create-image.png "create-image")
 
 ```bash
 docker run -it ubuntu:latest --name git /bin/bash
