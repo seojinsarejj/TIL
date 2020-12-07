@@ -15,9 +15,6 @@
 - 컨테이너 == 이미지를 실행한 상태
 
 
-
-
-
 ## Docker 작동 방식
 ![vm-vs-docker](../../images/vm-vs-docker.png "vm-vs-docker")
 
