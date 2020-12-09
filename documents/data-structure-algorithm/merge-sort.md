@@ -1,4 +1,4 @@
-# Merge Sort and Quick Sort
+# Merge Sort
 
 ## Merge Sort (합병 정렬)
 ![merge-sor-gif](../../images/merge-sort-gif.gif "merge-sort")
