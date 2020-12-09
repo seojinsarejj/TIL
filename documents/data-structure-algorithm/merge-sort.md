@@ -72,3 +72,8 @@ def merge(left, right):
             right = right[1:]
     return result
 ```
+
+### 합병 정렬 시간 복잡도
+![sort-time-complexity-etc](../../images/sort-time-complexity-etc.png "sort-time-complexity-etc")
+
+- ***순환 호출의 깊이 X 각 층에서의 비교 횟수 = logn X n = nlogn***
