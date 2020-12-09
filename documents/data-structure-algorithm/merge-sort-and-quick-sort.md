@@ -1,7 +1,7 @@
 # Merge Sort and Quick Sort
 
 ## Merge Sort (합병 정렬)
-
+![merge-sor-gif](../../images/merge-sort-gif.gif "merge-sort")
 ### Merge Sort (합병 정렬) 이란?
 **분할 정복 알고리즘**의 하나
 
