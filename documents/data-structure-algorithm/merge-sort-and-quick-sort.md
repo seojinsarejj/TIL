@@ -35,3 +35,40 @@
 - 새로운 리스트(sorted)를 원래의 리스트(list)로 옮긴다.
 
 ![merge-sort](../../images/merge-sort.png "merge-sort")
+
+### 코드 구현 (파이썬)
+```python
+
+def merge_sort(list):
+    if len(list) <= 1:
+        return list
+    mid = len(list) // 2
+    leftList = list[:mid]
+    rightList = list[mid:]
+    leftList = merge_sort(leftList)
+    rightList = merge_sort(rightList)
+    return merge(leftList, rightList)
+```
+
+```python
+
+# 분리된 리스트를 병합과 동시에 정렬함
+
+def merge(left, right):
+    result = []
+    while len(left) > 0 or len(right) > 0:
+        if len(left) > 0 and len(right) > 0:
+            if left[0] <= right[0]:
+                result.append(left[0])
+                left = left[1:]
+            else:
+                result.append(right[0])
+                right = right[1:]
+        elif len(left) > 0:
+            result.append(left[0])
+            left = left[1:]
+        elif len(right) > 0:
+            result.append(right[0])
+            right = right[1:]
+    return result
+```
