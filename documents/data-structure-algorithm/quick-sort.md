@@ -45,3 +45,56 @@
   - low와 high 값을 교환
   - 이 과정을 low와 high가 엇갈릴 때까지 반복
 - 2회전 , 3회전을 위의 방법으로 반복한다.
+
+#### 퀵 정렬의 장단점
+
+- 장점
+  - 속도가 빠르다
+    - 시간 복잡도로 O(nlog₂n)를 가지는 다른 정렬 알고리즘과 비교했을 때도 가장 빠르다.
+  - 추가 메모리 공간을 필요로 하지 않는다.
+- 단점
+  - 정렬된 리스트에 대해서는 퀵 정렬의 불균형 분할에 의해 오히려 수행시간이 더 많이 걸린다.
+  - 피벗 값에 따라 시간복잡도가 크게 달라진다. 이상적인 값을 선택했다면 아주 빠른 시간복잡도를 가지지만 최악으로 선택할 경우 **O(N^2)** 이라는 시간 복잡도를 갖게된다.
+
+### 코드 구현 (파이썬)
+
+```python
+def quick_sort(arr):
+    def sort(low, high):
+        if high <= low:
+            return
+
+        mid = partition(low, high)
+        sort(low, mid - 1)
+        sort(mid, high)
+
+    def partition(low, high):
+        pivot = arr[(low + high) // 2]
+        while low <= high:
+            while arr[low] < pivot:
+                low += 1
+            while arr[high] > pivot:
+                high -= 1
+            if low <= high:
+                arr[low], arr[high] = arr[high], arr[low]
+                low, high = low + 1, high - 1
+        return low
+
+    return sort(0, len(arr) - 1)
+
+```
+
+### 퀵 정렬 시간 복잡도
+
+- 최선의 경우
+  ![sort-time-complexity-etc1](../../images/sort-time-complexity-etc1.png "sort-time-complexity-etc1")
+
+- **_순환 호출의 깊이 X 각 순환 호출 단계의 비교 연산 = log₂n X n = nlog₂n_**
+
+---
+
+- 최악의 경우
+
+  ![sort-time-complexity-etc2](../../images/sort-time-complexity-etc2.png "sort-time-complexity-etc2")
+
+- **_순환 호출의 깊이 \* 각 순환 호출 단계의 비교 연산 = n^2_**
