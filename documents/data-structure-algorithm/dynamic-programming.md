@@ -24,6 +24,10 @@
 
 - `다음 수열 = 이전 수열 + 두단계 전 수열` 이라는 점화식을 가짐
 
+![fibo_indefficiency](../../images/fibo_indefficiency.png "fibo_indefficiency")
+
+**위 그림처럼 분할 정복 방식으로 푼다면 많은 중복된 문제를 그때그때 풀어야 하는 상황이 발생하게 된다.**
+
 #### 1. 작은 문제들이 반복된다.
 
 - `F(5)`를 구하기 위해서는 `F(4)`,`F(3)` 이 필요하다. 다시 `F(4)`를 구하기 위해서는 `F(3)`,`F(2)`가 필요하다.
@@ -39,22 +43,24 @@
 #### 코드
 
 ```python
+def fibo(n):
+    if n == 0 or 1 : return 1
+    return fibo(n-2) + fibo(n-1)
+```
+
+위 방식처럼 재귀함수로 호출한다면 같은 문제를 여러번 풀게되어 실행 시간이 매우 길어진다.
+
+```python
 def memoization_fibo(n):
-    memo[0] = 1
-    memo[1] = 1
+    memo = []
+    for i in range(0,n):
+        if i < 2:
+            memo.append(1)
+        else:
+            memo.append(memo[i-2] + memo[i-1])
 
-    if n < 2 :
-        return memo[n]
-
-    for i in range(2,n+1):
-        memo[i] = memo[i-2] + memo[i-1]
-
-    return memo[n]
-
-
-if __name__ == '__main__':
-    n = int(sys.stdin.readline())
-    memo = [0 for i in range(n+2)]
-    print(memoization_fibo(n))
+    return memo[n-1]
 
 ```
+
+그러나 한번 구한 값을 저장해두는 방식을 사용한다면 매우 빠르게 실행된다.
