@@ -24,7 +24,7 @@
 
 - `다음 수열 = 이전 수열 + 두단계 전 수열` 이라는 점화식을 가짐
 
-![fibo_indefficiency](../../images/fibo_indefficiency.png "fibo_indefficiency")
+![fibo-indefficiency](../../images/fibo_indefficiency.png "fibo_indefficiency")
 
 **위 그림처럼 분할 정복 방식으로 푼다면 많은 중복된 문제를 그때그때 풀어야 하는 상황이 발생하게 된다.**
 
@@ -44,8 +44,11 @@
 
 ```python
 def fibo(n):
-    if n == 0 or 1 : return 1
-    return fibo(n-2) + fibo(n-1)
+    if n <= 2 :
+        return 1
+    else:
+        return (fibo(n-2) + fibo(n-1))
+
 ```
 
 위 방식처럼 재귀함수로 호출한다면 같은 문제를 여러번 풀게되어 실행 시간이 매우 길어진다.
