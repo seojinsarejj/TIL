@@ -55,14 +55,12 @@ def fibo(n):
 
 ```python
 def memoization_fibo(n):
-    memo = []
-    for i in range(0,n):
-        if i < 2:
-            memo.append(1)
-        else:
-            memo.append(memo[i-2] + memo[i-1])
-
-    return memo[n-1]
+    if i < 2:
+        return 1
+    if (memo(n)):
+        return memo[n]
+    memo[n] = memoization_fibo(n-1) + memoization_fibo(n-2)
+    return memo[n]
 
 ```
 
@@ -76,6 +74,21 @@ def memoization_fibo(n):
 
 큰 문제에서 작은 부분 문제를 재귀적으로 호출하여 리턴 되는 값을 이용하여 큰 문제를 해결하는 방식.
 
+함수 호출을 줄이기 위해 앞서 말한 Memoization을 사용한다.
+
 #### Bottom-Up
 
 작은 부분문제들을 미리 계산해두고, 이 부분문제들을 모아 큰 문제를 해결하는 방식.
+
+```python
+def memoization_fibo(n):
+    memo = []
+    for i in range(0,n):
+        if i < 2:
+            memo.append(1)
+        else:
+            memo.append(memo[i-2] + memo[i-1])
+
+    return memo[n-1]
+
+```
