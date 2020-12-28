@@ -2,7 +2,7 @@
 
 ## Quick Sort (퀵 정렬)
 
-![quick-sort-gif](../../images/quick-sort-gif.gif "quick-sort-gif")
+![quick-sort-gif](../../../images/quick-sort-gif.gif "quick-sort-gif")
 
 ### Quick Sort (퀵 정렬) 이란?
 
@@ -22,7 +22,7 @@
 - 부분 리스트들이 더 이상 분할이 불가능할 때까지 반복한다.
   - 리스트의 크기가 0이나 1이 될 때까지 반복한다.
 
-![quick-sort-concepts](../../images/quick-sort-concepts.png "quick-sort-concepts")
+![quick-sort-concepts](../../../images/quick-sort-concepts.png "quick-sort-concepts")
 
 ### Quick sort 알고리즘의 구체적인 개념
 
@@ -35,7 +35,7 @@
 
 #### 퀵 정렬의 과정
 
-![quick-sort2](../../images/quick-sort2.png "quick-sort2")
+![quick-sort2](../../../images/quick-sort2.png "quick-sort2")
 
 - 리스트의 첫 번째 데이터를 피벗 값으로 정한다. (임의의 값)
 - 2개의 인덱스 변수(low, high)를 이용해서 리스트를 두 개의 부분 리스트로 나눈다.
@@ -87,7 +87,7 @@ def quick_sort(arr):
 ### 퀵 정렬 시간 복잡도
 
 - 최선의 경우
-  ![sort-time-complexity-etc1](../../images/sort-time-complexity-etc1.png "sort-time-complexity-etc1")
+  ![sort-time-complexity-etc1](../../../images/sort-time-complexity-etc1.png "sort-time-complexity-etc1")
 
 - **_순환 호출의 깊이 X 각 순환 호출 단계의 비교 연산 = log₂n X n = nlog₂n_**
 
@@ -95,6 +95,6 @@ def quick_sort(arr):
 
 - 최악의 경우
 
-  ![sort-time-complexity-etc2](../../images/sort-time-complexity-etc2.png "sort-time-complexity-etc2")
+  ![sort-time-complexity-etc2](../../../images/sort-time-complexity-etc2.png "sort-time-complexity-etc2")
 
 - **_순환 호출의 깊이 \* 각 순환 호출 단계의 비교 연산 = n^2_**

@@ -2,7 +2,7 @@
 
 ## Merge Sort (합병 정렬)
 
-![merge-sor-gif](../../images/merge-sort-gif.gif "merge-sort")
+![merge-sor-gif](../../../images/merge-sort-gif.gif "merge-sort")
 
 ### Merge Sort (합병 정렬) 이란?
 
@@ -34,7 +34,7 @@
 - 각 부분 배열을 정렬할 떄도 합병 정렬을 순환적으로 호출하여 적용
 - 합병 정렬에서 **실제로 정렬이 이루어지는 시점은 2개의 리스트를 합병(merge)하는 단계**
 
-![merge-sort-concepts](../../images/merge-sort-concepts.png "merge-sort-concepts")
+![merge-sort-concepts](../../../images/merge-sort-concepts.png "merge-sort-concepts")
 
 #### 두 개의 리스트를 합병하는 과정
 
@@ -43,7 +43,7 @@
 - 만약 둘 중에서 하나의 리스트가 먼저 끝나게 되면 나머지 리스트의 값들을 전부 새로운 리스트(sorted)로 복사한다.
 - 새로운 리스트(sorted)를 원래의 리스트(list)로 옮긴다.
 
-![merge-sort](../../images/merge-sort.png "merge-sort")
+![merge-sort](../../../images/merge-sort.png "merge-sort")
 
 #### 합병 정렬의 장단점
 
@@ -94,6 +94,6 @@ def merge(left, right):
 
 ### 합병 정렬 시간 복잡도
 
-![sort-time-complexity-etc](../../images/sort-time-complexity-etc.png "sort-time-complexity-etc")
+![sort-time-complexity-etc](../../../images/sort-time-complexity-etc.png "sort-time-complexity-etc")
 
 - **_순환 호출의 깊이 X 각 층에서의 비교 횟수 = log₂n X n = nlog₂n_**
