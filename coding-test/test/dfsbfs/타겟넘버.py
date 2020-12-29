@@ -40,15 +40,11 @@ def solution(numbers, target):
         
         global count
         if index == len_numbers:
-            print("최종 sum : " , sum)
             if sum == target:
                 count += 1
             return
 
-            
         sum += (a * numbers[index])
-        print("더해지는 수:" ,a *numbers[index])
-        print("sum : " ,sum)
 
         dfs(-1, index+1,sum)
         dfs(1, index+1,sum)
