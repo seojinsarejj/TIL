@@ -16,5 +16,6 @@ def solution(s):
 
 
 
+
 print(solution("K1KA5CB7"))
 print(solution("AJKDLSI412K4JSJ9D"))
