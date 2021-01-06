@@ -33,7 +33,7 @@ print(solution("0011"))
 # 다른 사람의 풀이 
 
 from itertools import permutations
-def solution(n):
+def solution2(n):
     a = set()
     for i in range(len(n)):
         a |= set(map(int, map("".join, permutations(list(n), i + 1))))
