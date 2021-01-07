@@ -66,7 +66,7 @@ def solution(p):
         
         
 # 다른 사람의 풀이 
-def solution(p):
+def solution2(p):
     if p=='': return p
     r=True; c=0
     for i in range(len(p)):
