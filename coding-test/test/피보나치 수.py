@@ -13,3 +13,10 @@ def solution(n):
     return fibo(n)%1234567
 
 print(solution(5))
+
+# 다른 사람의 풀이
+def solution1(num):
+    a,b = 0,1
+    for i in range(num):
+        a,b = b,a+b
+    return a%1234567
