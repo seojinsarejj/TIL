@@ -1,5 +1,5 @@
 # 1차 --- 40.0 / 100.0
-def solution(m, musicinfos):
+def solution1(m, musicinfos):
     
     for music in musicinfos:
         info = music.split(",")
@@ -14,4 +14,4 @@ def solution(m, musicinfos):
     return None
 
 
-print(solution("ABCDEFG",["12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"]))
+print(solution1("ABCDEFG",["12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"]))
