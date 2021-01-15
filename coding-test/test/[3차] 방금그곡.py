@@ -15,23 +15,121 @@ def solution1(m, musicinfos):
 
 # 2차 --- 56.7 / 100.0
 
+# def rep(m):
+#     m = m.replace("C#","c").replace("D#","d").replace("F#","f").replace("G#","g").replace("A#","a")
+    
+#     return m
+    
+
+# def solution(m, musicinfos):
+    
+#     for music in musicinfos:
+#         info = music.split(",")
+#         start,end = info[0].split(":"), info[1].split(":")
+#         time = int(end[1]) - int(start[1])
+#         music = rep(info[3])
+#         result = music * (time // len(music)) + music[:time % len(music)]
+#         if rep(m) in result :
+#             return info[2]
+        
+#     return None
+
+
+# 3차 --- 90.0 / 100.0
+# def rep(m):
+#     m = m.replace("C#","c").replace("D#","d").replace("F#","f").replace("G#","g").replace("A#","a")
+    
+#     return m
+
+# def get_time(start,end):
+#     hour = int(end[0]) - int(start[0])
+#     minit = int(end[1]) - int(start[1])
+#     if minit < 0:
+#         minit = 60 + minit
+
+#     return hour * 60 + minit
+
+# def solution(m, musicinfos):
+    
+#     for music in musicinfos:
+#         info = music.split(",")
+#         start,end = info[0].split(":"), info[1].split(":")
+#         time = get_time(start,end)
+#         music = rep(info[3])
+#         result = music * (time // len(music)) + music[:time % len(music)]
+#         if rep(m) in result :
+#             return info[2]
+
+#     return "(None)"
+
+# 
+
+
+# 4차 --- 93.3 / 100.0
+
+# def rep(m):
+#     m = m.replace("C#","c").replace("D#","d").replace("F#","f").replace("G#","g").replace("A#","a")
+    
+#     return m
+
+# def get_time(start,end):
+#     hour = int(end[0]) - int(start[0])
+#     minit = int(end[1]) - int(start[1])
+#     if minit < 0:
+#         minit = 60 + minit
+
+#     return hour * 60 + minit
+
+# def solution(m, musicinfos):
+    
+#     dic = dict()
+    
+#     for music in musicinfos:
+#         info = music.split(",")
+#         start,end = info[0].split(":"), info[1].split(":")
+#         time = get_time(start,end)
+#         music = rep(info[3])
+#         result = music * (time // len(music)) + music[:time % len(music)]
+#         if rep(m) in result :
+#             dic[time] = info[2]
+
+#     if dic:
+#         return dic[max(dic.keys())]   
+    
+#     return "(None)"
+
+
+# 5차 --- 96.7 / 100.0
 def rep(m):
     m = m.replace("C#","c").replace("D#","d").replace("F#","f").replace("G#","g").replace("A#","a")
     
     return m
-    
+
+def get_time(start,end):
+    hour = int(end[0]) - int(start[0])
+    minit = int(end[1]) - int(start[1])
+    if minit < 0:
+        minit = 60 + minit
+
+    return hour * 60 + minit
 
 def solution(m, musicinfos):
+    
+    dic = dict()
     
     for music in musicinfos:
         info = music.split(",")
         start,end = info[0].split(":"), info[1].split(":")
-        time = int(end[1]) - int(start[1])
+        time = get_time(start,end)
         music = rep(info[3])
         result = music * (time // len(music)) + music[:time % len(music)]
         if rep(m) in result :
-            return info[2]
-        
-    return None
+            if time not in dic.keys() :
+                dic[time] = info[2]
+ 
+    if dic:
+        return dic[max(dic.keys())]   
+    
+    return "(None)"
 
-print(solution2("ABCDEFG",["12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"]))
+print(solution("ABCDEFG",["12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"]))
