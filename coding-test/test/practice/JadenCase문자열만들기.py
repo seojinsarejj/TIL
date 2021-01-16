@@ -1,7 +1,18 @@
 # 1차 --- 43.8 / 100.0
-def solution(s):
+def solution1(s):
     change = list(map(lambda x : x[0].upper() + x[1:].lower(),s.split()))
     return " ".join(change)
 
+# 2차 --- 성공
+def solution2(s):
+    answer = s[0].upper()
+    
+    for i in range(1,len(s)):
+        if s[i] != " " and s[i-1] == " " :
+            answer += s[i].upper()
+        else :
+            answer += s[i].lower()
+    
+    return answer
 
-print(solution("3people unFollowed me"))
+print(solution2("3people     u me"))
