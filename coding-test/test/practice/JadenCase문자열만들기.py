@@ -16,3 +16,7 @@ def solution2(s):
     return answer
 
 print(solution2("3people     u me"))
+
+# 다른 사람의 풀이 --- ........하
+def solution(s):
+    return s.title()
