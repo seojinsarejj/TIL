@@ -9,3 +9,8 @@ def solution(A,B):
         result += i * j
         
     return result
+
+
+# 다른 사람의 풀이
+def getMinSum(A,B):
+    return sum(a*b for a, b in zip(sorted(A), sorted(B, reverse = True)))
