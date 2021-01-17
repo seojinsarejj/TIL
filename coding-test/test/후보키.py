@@ -84,4 +84,27 @@ relation = [["b","2","a","a","b"],["b","2","7","1","b"],["1","0","a","a","8"],["
 print(solution(relation))
 
 
+# 다른 사람의 풀이
+from collections import deque
+from itertools import combinations
+def other_solution(relation):
+    n_row=len(relation)
+    n_col=len(relation[0])  #->runtime error 우려되는 부분
 
+    candidates=[]
+    for i in range(1,n_col+1):
+        candidates.extend(combinations(range(n_col),i))
+
+    final=[]
+    for keys in candidates:
+        tmp=[tuple([item[key] for key in keys]) for item in relation]
+        if len(set(tmp))==n_row:
+            final.append(keys)
+
+    answer=set(final[:])
+    for i in range(len(final)):
+        for j in range(i+1,len(final)):
+            if len(final[i])==len(set(final[i]).intersection(set(final[j]))):
+                answer.discard(final[j])
+
+    return len(answer)
