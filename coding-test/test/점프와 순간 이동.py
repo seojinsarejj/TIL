@@ -12,4 +12,6 @@ def solution(n):
             
     return answer    
             
-    
+# 다른 사람의 풀이
+def other_solution(n):
+    return bin(n).count('1')
