@@ -35,3 +35,11 @@ def solution(files):
                 files[j],files[j+1] = files[j+1],files[j]
                     
     return files
+
+# 다른 사람의 풀이
+import re
+
+def other_solution(files):
+    a = sorted(files, key=lambda file : int(re.findall('\d+', file)[0]))
+    b = sorted(a, key=lambda file : re.split('\d+', file.lower())[0])
+    return b
