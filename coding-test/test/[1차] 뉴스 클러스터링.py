@@ -11,12 +11,8 @@ def solution(str1, str2):
     b = len([i for i in str2_lst if i in str1_lst])
     
     insec = min(a,b)
-    union = max(a,b)
+    union = len(str1_lst + str2_lst) - insec
     
-    a = len([i for i in str1_lst if i not in str2_lst])
-    b = len([i for i in str2_lst if i not in str1_lst])
-    
-    union += (a + b)
     if union == 0 :
         return 65536
     
