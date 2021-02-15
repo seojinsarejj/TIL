@@ -1,4 +1,8 @@
-# 우선 순위 큐 ( Priority Queue , heap )
+# 힙 ( Heap )
+
+> 우선 순위 큐를 위하여 만들어진 자료구조
+
+## 우선 순위 큐 ( Priority Queue )
 
 > 우선순위의 개념을 큐에 도입한 자료 구조
 
