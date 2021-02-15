@@ -18,3 +18,44 @@
   - 큰 값이 상위 레벨에 있고 작은 값이 하위 레벨에 있다는 정도
   - 부모 노드의 키 값이 자식 노드의 키 값보다 항상 큰(작은) 이진트리
 - 힙 트리는 중복된 값을 허용한다. ( 이진 탐색 트리는 허용하지 않는다. )
+
+## 구현
+
+### 모듈 임포트
+
+```python
+import heapq
+```
+
+### 최소 힙 생성
+
+- `heapq` 모듈은 파이썬의 보통 리스트를 마치 최소 힙처럼 다룰 수 있도록 도와준다.
+
+```python
+heap = []
+```
+
+### 힙에 원소 추가
+
+```python
+heapq.heappush(heap,4)
+heapq.heappush(heap,1)
+heapq.heappush(heap,7)
+heapq.heappush(heap,3)
+```
+
+```python
+[1,3,7,4]
+```
+
+### 힘에서 원소 삭제
+
+```python
+print(heapq.heappop(heap))
+print(heap)
+```
+
+```python
+1
+[3,4,7]
+```
