@@ -59,3 +59,15 @@ print(heap)
 1
 [3,4,7]
 ```
+
+### 기존 리스트를 힙으로 변환
+
+```python
+heap = [4,1,7,3,8,5]
+heapq.heapify(heap)
+print(heap)
+```
+
+```python
+[1,3,4,5,7,8]
+```
