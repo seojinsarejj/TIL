@@ -126,3 +126,12 @@ result = p.findall("life is too short")
 print(result)
 >> ['life', 'is', 'too', 'short']
 ```
+
+**다음과 같이 패턴 생성 없이 정규표현식을 사용할 수 있다.**
+
+```python
+txt = 'abc@facebook.com와 bbc@google.com에서 이메일이 도착하였습니다.'
+result = re.findall("\w+@[a-z.]+", txt)
+print(result)
+>> ['abc@facebook.com', 'bbc@google.com']
+```
