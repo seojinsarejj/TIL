@@ -75,3 +75,76 @@ print(a)
 ```bash
 [['a', 0], ['b', 1], ['d', 3], ['c', 4]]
 ```
+
+## itertools
+
+### permutations
+- r개의 데이터를 뽑아 나열하는 모든 경우(순열)
+
+```python
+from itertools import permutations
+
+data = ['A','B','C']
+
+result = list(permutations(data,3))
+
+print(result)
+```
+```bash
+[('A', 'B', 'C'), ('A', 'C', 'B'), ('B', 'A', 'C'), ('B', 'C', 'A'), ('C', 'A', 'B'), ('C', 'B', 'A')]
+```
+
+### combinations
+- r개의 데이터를 뽑아 순서를 고려하지 않고 나열하는 모든 경우(조합, 중복을 허용하지 않음)
+
+```python
+from itertools import combinations
+
+data = ["A", "B", "C"] # 데이터 준비
+result = list(combinations(data, 2)) # 2개를 뽑는 모든 조합 구하기
+
+print(result)
+```
+
+```bash
+[('A', 'B'), ('A', 'C'), ('B', 'C')]
+```
+
+## collections
+
+### Counter
+- 횟수를 세는 함수
+
+```python
+from collections import Counter
+
+data = ['A','B','C','A','C','C']
+
+result = Counter(data)
+
+print(dict(result))
+```
+
+```bash
+{'C': 3, 'A': 2, 'B': 1}
+```
+
+### deque
+- 큐를 쉽게 구현할 수 있는 라이브러리
+
+#### 함수
+- popleft() : 첫 번째 원소 제거
+- appendleft() : 첫 번째 원소 삽입
+- pop() : 마지막 원소 제거
+- append() : 마지막 원소 삽입
+
+```
+from collections import deque
+
+data = deque([2, 3, 4])
+data.append(5)
+
+print(data) # deque([2, 3, 4, 5])
+print(data.popleft()) # 2
+print(list(data)) # [3, 4, 5]
+```
