@@ -36,6 +36,16 @@ for i,j in enumerate(a):
 2 c
 3 d
 ```
+### eval
+- 문자열의 수식을 계산해주는 함수
+  
+```python
+result = eval("(2 + 4) * 6")
+print(result)
+```
+```bash
+36
+```
 
 ### set
 - 집합 자료형 생성
