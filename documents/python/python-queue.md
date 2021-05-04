@@ -55,3 +55,26 @@ queue.get()
 >> 5
 queue.get()
 >> 6
+```
+
+## 우선순위 큐 , heapq
+> heapq로 우선순위 큐를 구현한다.
+
+```python
+import heapq
+
+heap = []
+
+# 삽입
+heapq.heappush(heap, "a")
+heapq.heappush(heap, "d")
+heapq.heappush(heap, "b")
+heapq.heappush(heap, "c")
+
+# 삭제
+heapq.heappop(heap)
+>> "a"
+heapq.heappop(heap)
+>> "b"
+```
+
