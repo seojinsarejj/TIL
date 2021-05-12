@@ -44,15 +44,14 @@
 - 클라이언트는 해지 준비가 되었다는 ACK를 확인했다는 메세지를 보낸다.
 - A 클라이언트의 상태가 **FIN-WAIT**에서 **TIME-WAIT** 상태가 된다.
 
-#### SYN (Synchronize Sequence Number)
-
-- 연결 설정
-- Sequence Number를 랜덤으로 설정하여 세션을 연결하는 데 사용하며, 초기에 Sequence Number를 전송한다.
-
 ---
 
 ## TCP Header 안의 플래그 정보
 
+#### SYN (Synchronize Sequence Number)
+
+- 연결 설정
+- Sequence Number를 랜덤으로 설정하여 세션을 연결하는 데 사용하며, 초기에 Sequence Number를 전송한다.
 #### ACK (Acknowledgement)
 
 - 응답 확인
